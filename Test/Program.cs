@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<TestDBContext>(options =>
-    options.UseSqlServer("Data Source = (localdb)\\mssqllocaldb; Initial Catalog = TestDB"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection")));
 
 builder.Services.AddScoped<UnitOfWork>();
 
