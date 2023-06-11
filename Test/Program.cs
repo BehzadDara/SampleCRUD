@@ -10,8 +10,6 @@ builder.Services.AddDbContext<TestDBContext>(options =>
 
 builder.Services.AddScoped<UnitOfWork>();
 
-builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("allowall", policy =>
