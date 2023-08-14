@@ -22,10 +22,7 @@ namespace Test
             get
             {
 
-                if (testModelRepository == null)
-                {
-                    testModelRepository = new TestModelRepository(_dBContext);
-                }
+                testModelRepository ??= new TestModelRepository(_dBContext);
                 return testModelRepository;
             }
         }
